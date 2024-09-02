@@ -1,0 +1,265 @@
+body {
+    font-family: 'Tangerine', serif;
+    background-color: #f5f5f5;
+    color: #bd6767;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Page color transitions */
+}
+
+.intro h2 {
+    font-family: 'Oriental Cats', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-family: 'Miraculous & Christmas', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #634a4a38;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color 0.5s ease; /* Header transition */
+}
+
+.title {
+    font-size: 2.5rem;
+    font-family: 'Cute Font', cursive;
+    transition: transform 0.3s ease; /* Title animation */
+}
+
+.title:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #555;
+    transition: color 0.5s ease; /* Subtitle transition */
+}
+
+.main {
+    padding: 2rem;
+}
+
+/* Rescued Dog Images Row */
+.dog-images-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    transition: transform 0.4s ease; /* Image row transition */
+}
+
+.rescued-dog-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease; /* Image hover animation */
+}
+
+.rescued-dog-image:hover {
+    transform: scale(1.2); /* Enlarge hovered image */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+/* Neighboring Image Effect */
+.rescued-dog-image:hover ~ .rescued-dog-image {
+    filter: brightness(0.7);
+    transition: filter 0.5s ease; /* Neighbor image fade effect */
+}
+
+.dog-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 1rem 0;
+    border-radius: 15px;
+    transition: transform 0.4s ease, filter 0.4s ease; /* Image transition */
+}
+
+.dog-image:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Button Styles with Transition */
+.action-button {
+    background-color: #66ccff;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-family: 'Cute Font', cursive;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Button transitions */
+}
+
+.action-button:hover {
+    background-color: #3399ff;
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Slider Card Styles with Transition */
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    transition: transform 0.5s ease; /* Smooth slider transition */
+}
+
+.card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 0 0 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Card transitions */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lifts card slightly on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Increases shadow on hover */
+}
+
+.message{
+    position: relative;
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 0 0 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #fff;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    padding: 1rem;
+}
+
+.footer-title {
+    font-family: 'Cute Font', cursive;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+}
+
+.footer-link {
+    font-family: 'Cute Font', cursive;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffcc66;
+    transform: translateY(-3px);
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 0.5rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Animations for Footer Elements */
+.footer-title, .footer-link, .social-icon {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.footer-link {
+    animation-delay: 0.2s;
+}
+
+.social-icon {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Home Button Styles */
+.home-button {
+    position: fixed;
+    top: 30px; /* Adjust as needed */
+    right: 30px; /* Adjust as needed */
+    width: 100px;
+    height: 50px;
+    background-color: #18eda9; /* Light color for visibility */
+    color: #fff;
+    border: none;
+    border-radius: 25px; /* Cylindrical shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Miraculous & Christmas', cursive;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #8170e4;
+    transform: scale(1.05);
+}
+
+.home-button:active {
+    background-color: #ff0026;
+}
